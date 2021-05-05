@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z8HxVV6GxTIpx5D/pMtRH2J4FVcaDrBfUHXrmdKoRpH1J3VTJRDedFgsIZUxOwp5OWyywlTXhFNruLf0InEiRw==",
+  "dgSpecHash": "bDednlH38RspXzkQErx/di6y/LAACTkTe4xPRL04u9IASg+xG1ZcoXMJdX2TZYhTn5p7gCxuBdvDXNebXqxEoQ==",
   "success": true,
-  "projectFilePath": "C:\\src\\training\\devops\\Docker\\DockerCompose\\DockerCompose.csproj",
+  "projectFilePath": "C:\\src\\training\\devops\\Docker\\dockercompose\\DockerCompose.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

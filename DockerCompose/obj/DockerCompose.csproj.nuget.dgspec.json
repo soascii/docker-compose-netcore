@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\src\\training\\devops\\Docker\\DockerCompose\\DockerCompose.csproj": {}
+    "C:\\src\\training\\devops\\Docker\\dockercompose\\DockerCompose.csproj": {}
   },
   "projects": {
-    "C:\\src\\training\\devops\\Docker\\DockerCompose\\DockerCompose.csproj": {
+    "C:\\src\\training\\devops\\Docker\\dockercompose\\DockerCompose.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\src\\training\\devops\\Docker\\DockerCompose\\DockerCompose.csproj",
+        "projectUniqueName": "C:\\src\\training\\devops\\Docker\\dockercompose\\DockerCompose.csproj",
         "projectName": "DockerCompose",
-        "projectPath": "C:\\src\\training\\devops\\Docker\\DockerCompose\\DockerCompose.csproj",
+        "projectPath": "C:\\src\\training\\devops\\Docker\\dockercompose\\DockerCompose.csproj",
         "packagesPath": "C:\\Users\\itsm.avolker.c\\.nuget\\packages\\",
-        "outputPath": "C:\\src\\training\\devops\\Docker\\DockerCompose\\obj\\",
+        "outputPath": "C:\\src\\training\\devops\\Docker\\dockercompose\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
