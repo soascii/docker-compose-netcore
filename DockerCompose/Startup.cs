@@ -2,10 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DockerCompose.Model;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,6 +27,17 @@ namespace DockerCompose
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            var server = Configuration["DBServer"] ?? "localhost";
+            var port = Configuration["DBPort"] ?? "1433";
+            var user = Configuration["DBUser"] ?? "SA";
+            var password = Configuration["DBPassword"] ?? "Password2021";
+            var databaseName = Configuration["DBName"] ?? "ComposeDB";
+
+            services.AddDbContext<ComposeContext>(options => options.UseSqlServer(
+                $"Server={server},{port};Initial Catalog={databaseName};User ID={user};Password={password}"
+            ));
+
             services.AddControllers();
         }
 
@@ -41,6 +54,8 @@ namespace DockerCompose
             app.UseRouting();
 
             app.UseAuthorization();
+
+            Seed.PrepPopulation(app);
 
             app.UseEndpoints(endpoints =>
             {
