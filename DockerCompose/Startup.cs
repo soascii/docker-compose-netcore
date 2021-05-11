@@ -28,7 +28,7 @@ namespace DockerCompose
         public void ConfigureServices(IServiceCollection services)
         {
 
-            var server = Configuration["DBServer"] ?? "localhost";
+            var server = Configuration["DBServer"] ?? "db";
             var port = Configuration["DBPort"] ?? "1433";
             var user = Configuration["DBUser"] ?? "SA";
             var password = Configuration["DBPassword"] ?? "Password2021";
