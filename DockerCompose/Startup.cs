@@ -28,15 +28,15 @@ namespace DockerCompose
         public void ConfigureServices(IServiceCollection services)
         {
 
-            var server = Configuration["DBServer"] ?? "db";
-            var port = Configuration["DBPort"] ?? "1433";
-            var user = Configuration["DBUser"] ?? "SA";
-            var password = Configuration["DBPassword"] ?? "Password2021";
-            var databaseName = Configuration["DBName"] ?? "ComposeDB";
+            var connection = @"Server=ms-sql-server,1433;Database=master;User=sa;Password=PasSword2021!;";
 
-            services.AddDbContext<ComposeContext>(options => options.UseSqlServer(
-                $"Server={server},{port};Initial Catalog={databaseName};User ID={user};Password={password}"
-            ));
+            // var server = Configuration["DBServer"] ?? "ms-sql-server";
+            // var port = Configuration["DBPort"] ?? "1433";
+            // var user = Configuration["DBUser"] ?? "sa";
+            // var password = Configuration["DBPassword"] ?? "PasSword2021!";
+            // var databaseName = Configuration["DBName"] ?? "ComposeDB";
+
+            services.AddDbContext<ComposeContext>(options => options.UseSqlServer(connection));
 
             services.AddControllers();
         }
